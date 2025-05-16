@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto implementa un sistema backend para la gestión de dispositivos IoT, sensores y sus lecturas, utilizando SQLAlchemy como ORM y Alembic para el control de versiones del esquema de base de datos. Permite registrar dispositivos, agruparlos, gestionar sensores, almacenar lecturas y mantener logs de estado.
+Este proyecto implementa un sistema backend para la gestión de dispositivos IoT, sensores y sus lecturas, utilizando **SQLAlchemy** como ORM y **Alembic** para el control de versiones del esquema de base de datos. Permite registrar dispositivos, agruparlos, gestionar sensores, almacenar lecturas y mantener logs de estado.
 
 ---
 
@@ -34,8 +34,8 @@ Base de datos iot/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <https://github.com/HisokaMorow1/Base-de-datos-iot>
-cd Base de datos Iot
+git clone https://github.com/HisokaMorow1/BaseDeDatosIot.git
+cd "Base de datos iot"
 ```
 
 ### 2. Crear y activar un entorno virtual
@@ -60,14 +60,11 @@ Asegúrate de tener instalados:
 
 Crea una base de datos y un usuario en PostgreSQL:
 
-```bash
-sudo -i -u postgres
-psql
+```sql
+-- En psql como usuario postgres:
 CREATE DATABASE iot_db;
 CREATE USER iot_user WITH PASSWORD 'admin';
 GRANT ALL PRIVILEGES ON DATABASE iot_db TO iot_user;
-\q
-exit
 ```
 
 Asegúrate de que la URL de conexión en `alembic.ini` y `app/database.py` sea:
@@ -130,3 +127,9 @@ Incluidas en `pyproject.toml`:
 - SQLAlchemy
 - Alembic
 - psycopg2-binary
+
+---
+
+## Autor
+
+- [HisokaMorow1](https://github.com/HisokaMorow1)
