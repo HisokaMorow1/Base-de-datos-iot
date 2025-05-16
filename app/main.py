@@ -1,7 +1,14 @@
-from app.database import SessionLocal
+from app.database import SessionLocal, engine, Base
+from sqlalchemy import text
 import app.crud as crud
 
+def reset_db():
+    # Elimina todas las tablas y las vuelve a crear
+    Base.metadata.drop_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
+
 def main():
+    reset_db()  # Borra y crea todas las tablas cada vez que ejecutas el script
     db = SessionLocal()
 
     # Crear un tipo de dispositivo
@@ -44,5 +51,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    

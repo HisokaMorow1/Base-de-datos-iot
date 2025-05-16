@@ -34,8 +34,8 @@ Base de datos iot/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd LEARNIN-LITESTAR
+git clone <https://github.com/HisokaMorow1/Base-de-datos-iot>
+cd Base de datos Iot
 ```
 
 ### 2. Crear y activar un entorno virtual
@@ -109,7 +109,7 @@ PGPASSWORD=admin psql -U iot_user -h localhost -d iot_db < dump.sql
 Puedes ejecutar el script de ejemplo para probar las operaciones CRUD:
 
 ```bash
-python app/main.py
+python3 -m app.main
 ```
 
 Esto demostrará la creación de tipos de dispositivos, grupos, dispositivos, sensores, lecturas y logs de estado.
